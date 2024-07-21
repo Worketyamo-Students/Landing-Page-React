@@ -3,7 +3,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs"; 
 import { FcGoogle } from "react-icons/fc"; 
 
-interface ISocialLink extends HTMLProps<HTMLElement> {
+interface ISocialLink extends HTMLProps<ReactElement> {
     id: number;
     icon?: ReactElement;
     ref: string;
@@ -12,19 +12,19 @@ interface ISocialLink extends HTMLProps<HTMLElement> {
 const socialLink: ISocialLink[] = [
     {
         id: 1,
-        // icon: <FcGoogle />,
+        icon: <FcGoogle />,
         ref: '/google', 
     },
 
     {
         id: 2,
-        // icon: <BsFacebook />,
+        icon: <BsFacebook />,
         ref: '/facebook', 
     },
 
     {
         id: 3,
-        // icon: <AiOutlineGithub />,
+        icon: <AiOutlineGithub />,
         ref: '/github', 
     },
 ]

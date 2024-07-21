@@ -7,11 +7,13 @@ interface IsocialBtn extends HTMLProps<LinkHTMLAttributes<undefined>> {
 
 function SocialBtn(props: IsocialBtn) {
     return (
-            <a 
-                className="rounded-full bg-light border border-gray p-8"
-            >
-                {props.icon}A
-            </a>
+        <a 
+            target="_blank"
+            href={props.href}
+            className="inline-block rounded-full border border-gray bg-light p-3 text-4xl"
+        >
+            {props.icon}
+        </a>
     )
 }
 

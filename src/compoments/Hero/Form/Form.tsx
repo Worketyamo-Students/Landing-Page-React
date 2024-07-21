@@ -1,9 +1,12 @@
+import { BsFacebook } from "react-icons/bs"; 
+import { AiOutlineGithub } from "react-icons/ai"; 
+import { FcGoogle } from "react-icons/fc"; 
 import { CgMail } from "react-icons/cg"; 
 import { BiLock } from "react-icons/bi"; 
-import socialLink from '../../../constants/social-links'
 import SocialBtn from './SocialBtn'
 import Input from './Input' 
 import Button from './Button'
+// import socialLink from '../../../constants/social-links'
 
 const ElementsInput = [
     {
@@ -29,10 +32,10 @@ function Form() {
   return (
     <div className='max-w-screen-md w-full'>
         {/* Couleur a l'en tete */}
-        <div className="md:hidden w-screen h-10 bg-primary mb-6"></div>
+        <div className="md:hidden w-full h-12 bg-primary border-b-2 border-b-blue-400/90"></div>
 
         {/* Container */}
-        <div className="pt-16 md:pt-0 px-12">
+        <div className="pt-10 md:pt-0 px-8">
             {/* Titre du formulaire */}
             <div className="mb-10">
                 <h2 className="text-center md:text-left font-medium text-4xl text-dark">
@@ -40,9 +43,9 @@ function Form() {
                 </h2>
             </div>
 
-            <form action="" className="relative">
+            <form action="">
                 {/* Inputs du formulaire */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-5">
                     {
                         ElementsInput.map((ele) => (
                             <Input 
@@ -58,7 +61,7 @@ function Form() {
                 </div>
 
                 {/* Ligne de mot de passe  */}
-                <a href='/forgot_pasword' target='_blank' className=" flex justify-end text-xs py-1 mb-8 text-primary hover:underline">
+                <a href='/forgot_pasword' target='_blank' className=" flex justify-end text-xs py-1 mb-6 text-primary hover:underline">
                     Mot de passe oublié ?
                 </a>
 
@@ -72,7 +75,7 @@ function Form() {
             </form>
 
             {/* Ligne */}
-            <div className="flex items-center gap-5 mb-4">
+            <div className="flex items-center gap-5 mb-12">
                 <div className="w-full h-2 border-b-2 border-gray"></div>
                 <div><span className="text-base md:text-xl text-gray">ou</span></div>
                 <div className="w-full h-2 border-b-2 border-gray"></div>
@@ -80,14 +83,16 @@ function Form() {
 
             {/* Social Links */}
 
-            {/* <div className="flex items-center gap-6">
-                {
+            <div className="px-8 flex items-center justify-between">
+                {/* {
                     socialLink.map((link) => (
                         <SocialBtn key={link.id} href={link.ref} icon={link.icon}/>
                     ))
-                }
-            </div> */}
-            
+                } */}
+                <SocialBtn href="/whatsapp" icon={<FcGoogle />}/>            
+                <SocialBtn href="/facebook" icon={<BsFacebook color="blue"/>} />            
+                <SocialBtn href="/github" icon={<AiOutlineGithub color="gray" />}/>            
+            </div>
         </div>
 
     </div>

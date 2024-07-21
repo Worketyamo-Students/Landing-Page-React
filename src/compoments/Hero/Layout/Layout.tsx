@@ -12,7 +12,7 @@ const bgImage = {
 
 function Layout() {
   return (
-    <div style={bgImage} className="hidden md:block max-w-screen-sm"></div>
+    <div style={bgImage} className="hidden md:block max-w-screen-md w-full"></div>
   )
 }
 
